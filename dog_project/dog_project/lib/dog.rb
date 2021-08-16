@@ -28,21 +28,29 @@ class Dog
 
     def bark
 
-        if @age > 3
+        if age > 3
 
-            bark.uppercase
+            @bark.upcase
         else
-            bark.lowercase
+            @bark.downcase
             
         end
     end
 
-
-    def age=(new_num)
-
-        @age = new_num
+    def favorite_foods
+        @favorite_foods
 
     end
 
+    def favorite_food?(food)
+        @favorite_foods.each {|item| return true if item.downcase == food.downcase}
 
+        false
+    end
+
+
+    def age=(new_num)
+        @age = new_num
+    end
 end
+
