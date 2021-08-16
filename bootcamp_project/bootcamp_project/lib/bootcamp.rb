@@ -97,7 +97,46 @@ end
 
 
 
+def add_grade(student, grade)
+     @students.each do |pupil| 
+        if pupil.downcase == student.downcase
+            @grades[student] << grade 
+            return true
 
+
+        end
+
+    end
+false
+
+
+end
+
+
+
+
+
+
+def num_grades(student)
+    @grades[student].length
+
+
+ 
+end
+
+
+
+
+
+
+
+def average_grade(student)
+    if @grades[student].length != 0
+        return @grades[student].sum / @grades[student].length
+    
+    end
+    nil
+end
 
 
 
